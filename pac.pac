@@ -1473,6 +1473,9 @@ function FindProxyForURL(url, host) {
     }
     while (lastPos >= 1);
     //Designed by Dxf
+    if (host === 'localhost' || host === '127.0.0.1') {
+      return direct;
+    }
     if ((-1 != host.lastIndexOf('cn')) || (-1 != host.lastIndexOf('com')) || (-1 != host.lastIndexOf('net')) || (-1 != host.lastIndexOf('tv')) || (-1 != host.search("[0-9]"))) {
         return direct;
     }
