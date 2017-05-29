@@ -3,3 +3,5 @@
 [user]
 	email = t.rex.guo@gmail.com
 	name = Rex Guo
+[credential]
+	helper = cache
