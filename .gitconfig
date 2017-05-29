@@ -1,2 +1,5 @@
 [push]
 	default = simple
+[user]
+	email = t.rex.guo@gmail.com
+	name = Rex Guo
