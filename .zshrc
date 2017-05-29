@@ -84,8 +84,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#alias for cnpm
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
-  --cache=$HOME/.npm/.cache/cnpm \
-  --disturl=https://npm.taobao.org/mirrors/node \
-  --userconfig=$HOME/.cnpmrc"
