@@ -2,6 +2,8 @@
 	default = simple
 [user]
 	email = t.rex.guo@gmail.com
-	name = Rex Guo
+	name = trexguo
 [credential]
 	helper = cache
+[core]
+	autocrlf = input
