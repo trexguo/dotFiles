@@ -9,3 +9,6 @@
 	helper = cache
 [core]
 	autocrlf = input
+
+	# Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.gitignore
