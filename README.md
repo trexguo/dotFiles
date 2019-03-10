@@ -1,4 +1,1 @@
-# LinuxSetup
-
-Credits
-	To be added
+# Trexguo's dotFiles

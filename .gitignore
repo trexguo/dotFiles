@@ -5,7 +5,5 @@
 !.spacemacs
 !.gitignore
 !.gitconfig
-!pac.pac
-!awesome/
-!.emacs.d/
-!.conkyrc
+!.alias
+!.alias.macos

@@ -3,6 +3,8 @@
 [user]
 	email = t.rex.guo@gmail.com
 	name = trexguo
+[github]
+	user = trexguo
 [credential]
 	helper = cache
 [core]
