@@ -1,30 +1,42 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/opt/php/bin:$PATH
+
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/rex/.oh-my-zsh
+export ZSH="/Users/rex/.oh-my-zsh"
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
+DEFAULT_USER=$USER
+POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_head_icon user dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs ram)
+POWERLEVEL9K_ROOT_ICON="\uFS09C"
+# POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+# POWERLEVEL9K_VCS_GIT_GITLAB_ICON="\uF296"
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON="\uF408"
+POWERLEVEL9K_USER_ICON="\uF415"
+POWERLEVEL9K_OS_ICON="\uF415"
+POWERLEVEL9K_CUSTOM_HEAD_ICON='echo -e "\uFC06"'
+POWERLEVEL9K_CUSTOM_HEAD_ICON_FOREGROUND='blue'
+# POWERLEVEL9K_CUSTOM_HEAD_ICON_BACKGROUND='lightcoral'
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-POWERLEVEL9K_MODE='awesome-patched'
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time background_jobs ram virtualenv rbenv rvm)
-
-POWERLEVEL9K_OS_ICON_BACKGROUND="white"
-POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
-POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
@@ -40,7 +52,7 @@ POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -52,17 +64,25 @@ ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git svn archlinux)
+plugins=(
+  git
+  zsh-nvm
+  osx
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -94,4 +114,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
